@@ -1,0 +1,111 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background:-webkit-linear-gradient(45deg, orange, pink);    
+    height: 100%;
+}
+.button{
+    height: 40px;
+    width: 300px;
+    text-align: center;
+}
+.no{
+    height: 30px;
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    left: 700px;
+    background-color: red;
+    
+}
+.no:hover{
+    content: "<3";
+    box-shadow: 2px 3px 54px 3px black;
+    opacity: .4;
+}
+.si{
+    height: 30px;
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    left: 500px;
+    background:-webkit-linear-gradient(45deg, rgb(144, 247, 19), aqua); 
+    animation: giro 2s linear infinite;   
+}
+.si:hover{
+    content: "<3";
+    box-shadow: 2px 3px 54px 3px black;
+    transform: scale(1.05);
+}
+.text{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+.anuncio{
+    background-color: red;
+    height: 300px;
+    width: 300px;
+    z-index: 6;
+    position: absolute;
+    top:40%;
+    left: 39%;
+    transform: rotate(-45deg);
+}
+.anuncio::after, 
+.anuncio::before{
+    content: "";
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    animation: entrada 3s;
+}
+.anuncio::after{
+    left: 150px;
+}
+.anuncio::before{
+    top: -150px;
+}
+
+.todo{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: none;
+}
+
+@keyframes pulse {
+    75% {
+    transform: 
+        rotate(-45deg)
+        scale(1.1);
+    }
+}
+@keyframes entrada {
+    from{
+    height: 0%;
+    width: 0%;
+    }
+    to{
+    height: 300px;
+    width: 300px;
+    }
+}
+h2{
+    position:relative;
+    top: 40%;
+    justify-content: center;
+}
+button{
+    border-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}    
+@keyframes giro {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
